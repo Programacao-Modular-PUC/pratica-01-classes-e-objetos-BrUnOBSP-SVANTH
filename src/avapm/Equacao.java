@@ -8,106 +8,21 @@ package avapm;
  * @author 1593111
  */
 public class Equacao {
-    private double a;
-    private double b;
-    private double c;
-    private double del;
-    private double x1;
-    private double x2;
+ public double c1;
+ public double c2;
+ public double h;
+ 
     
-           
-
-public Equacao(){
-    this.a = 0.0;
-    this.b = 0.0;
-    this.c = 0.0;
-    this.del = 0.0;
-    this.x1 = 0.0;
-    this.x2 = 0.0;
+public Equacao(double c1, double c2){
+    this.c1 = c1;
+    this.c2 = c2;
+    
 }
-
-    /**
-     * @return the a
-     */
-    public double getA() {
-        return a;
-    }
-
-    /**
-     * @param a the a to set
-     */
-    public void setA(double a) {
-        this.a = a;
-    }
-
-    /**
-     * @return the b
-     */
-    public double getB() {
-        return b;
-    }
-
-    /**
-     * @param b the b to set
-     */
-    public void setB(double b) {
-        this.b = b;
-    }
-
-    /**
-     * @return the c
-     */
-    public double getC() {
-        return c;
-    }
-
-    /**
-     * @param c the c to set
-     */
-    public void setC(double c) {
-        this.c = c;
-    }
-
-    /**
-     * @return the del
-     */
-    public double getDel() {
-        return del;
-    }
-
-    /**
-     * @param del the del to set
-     */
-    public void setDel(double del) {
-        this.del = del;
-    }
-
-    /**
-     * @return the x1
-     */
-    public double getX1() {
-        return x1;
-    }
-
-    /**
-     * @param x1 the x1 to set
-     */
-    public void setX1(double x1) {
-        this.x1 = x1;
-    }
-
-    /**
-     * @return the x2
-     */
-    public double getX2() {
-        return x2;
-    }
-
-    /**
-     * @param x2 the x2 to set
-     */
-    public void setX2(double x2) {
-        this.x2 = x2;
-    }
-
-}       
+public double CalculaHipotenusa(){
+   h = Math.sqrt(Math.pow(c1,2) + Math.pow(c2, 2));
+   return h;
+}
+public double CalculaArea(){
+    return(c1*c2)/2;
+}
+}
